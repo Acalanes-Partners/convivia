@@ -70,7 +70,6 @@ export default function GalleryPage() {
     <div className="bg-white min-h-screen">
       {/* Header */}
       <div className="mx-auto max-w-6xl px-6 py-14 space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Gallery</p>
         <h1 className="font-display text-6xl text-[#0c0c0c]">See the space for yourself.</h1>
         <p className="text-black/60 max-w-xl">
           A look inside Convivia Work — from the focus zones and conference rooms to the AV production studio and community areas. Click any photo to expand.

@@ -22,7 +22,6 @@ export default function AvStudioPage() {
   return (
     <div className="bg-white">
       <section className="mx-auto max-w-5xl px-6 py-16 space-y-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">AV Production Studio</p>
         <h1 className="font-display text-6xl text-[#0c0c0c]">Produce content that sounds as good as it looks.</h1>
         <p className="text-black/70 max-w-3xl">
           Step into a fully equipped, production-ready studio designed for podcasters, video creators, livestream hosts, and hybrid teams who want

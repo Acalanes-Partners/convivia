@@ -23,7 +23,6 @@ export function LocationMap() {
           {/* Left: address + bullets */}
           <div className="space-y-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-[#fe904d] font-semibold">Find Us</p>
               <h2 className="font-display text-5xl text-[#0c0c0c] mt-1">Conveniently located in Walnut Creek.</h2>
               <p className="mt-3 text-lg font-medium text-[#2a2320]">{ADDRESS}</p>
             </div>

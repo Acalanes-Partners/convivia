@@ -5,7 +5,6 @@ export default function PrivacyPage() {
     <div className="bg-white">
       <div className="mx-auto max-w-3xl px-6 py-20 space-y-10">
         <div className="space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Legal</p>
           <h1 className="font-display text-6xl text-[#0c0c0c]">Privacy Policy</h1>
           <p className="text-sm text-black/40">Last updated: April 2026</p>
         </div>

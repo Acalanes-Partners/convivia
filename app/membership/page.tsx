@@ -7,6 +7,8 @@ const URLS = {
   cowork:    'https://conviviawork.coworksapp.com/membership-signup/11506',
   dedicated: 'https://conviviawork.coworksapp.com/membership-signup/11777',
   contact:   'https://conviviawork.coworksapp.com/membership-request/716',
+  mailMember:    'https://conviviawork.coworksapp.com/membership-signup/13314',
+  mailNonMember: 'https://conviviawork.coworksapp.com/membership-signup/13315',
 }
 
 const tiers = [
@@ -54,8 +56,8 @@ const tiers = [
     intro: 'Add a professional business address to your Convivia membership.',
     features: ['Walnut Creek business address at 1485 Treat Blvd.', 'Mail and package receiving on your behalf', 'Notifications when mail or packages arrive', 'Secure holding until you pick up', 'Mail forwarding available for $25/month + postage'],
     highlight: 'USPS Form 1583 authorization is required before service begins.',
-    signUpUrl: URLS.contact,
-    signUpLabel: 'Contact us',
+    signUpUrl: URLS.mailMember,
+    signUpOnly: true,
   },
   {
     name: 'Mail Service for Non-Members',
@@ -64,8 +66,8 @@ const tiers = [
     intro: 'A professional business address without a desk, ideal for remote and home-based businesses.',
     features: ['Walnut Creek business address at 1485 Treat Blvd.', 'Mail and package receiving on your behalf', 'Notifications when mail or packages arrive', 'Secure holding until you pick up', 'One-time $25 setup fee', 'Mail forwarding available for $25/month + postage'],
     highlight: 'USPS Form 1583 authorization is required before service begins.',
-    signUpUrl: URLS.contact,
-    signUpLabel: 'Contact us',
+    signUpUrl: URLS.mailNonMember,
+    signUpOnly: true,
   },
 ]
 
@@ -74,7 +76,6 @@ export default function MembershipPage() {
     <div className="bg-white">
       <div className="mx-auto max-w-5xl px-6 py-20 space-y-8">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Memberships</p>
           <h1 className="font-display text-6xl text-[#0c0c0c]">Choose how you plug into Convivia Work.</h1>
           <p className="mt-4 max-w-2xl text-black/70">
             Every plan is powered by our mobile app for seamless billing, booking, and access control. Start with a day pass or jump straight into a membership—
@@ -103,11 +104,13 @@ export default function MembershipPage() {
               </ul>
               <p className="mt-4 text-sm font-semibold text-black/60">{tier.highlight}</p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <Link href={URLS.tour} target="_blank" rel="noopener noreferrer" className={`${buttonBase} px-4 py-2 text-sm`}>
-                  Book a tour
-                </Link>
+                {!tier.signUpOnly && (
+                  <Link href={URLS.tour} target="_blank" rel="noopener noreferrer" className={`${buttonBase} px-4 py-2 text-sm`}>
+                    Book a tour
+                  </Link>
+                )}
                 <Link href={tier.signUpUrl} target="_blank" rel="noopener noreferrer" className={`${buttonBase} px-4 py-2 text-sm`}>
-                  {tier.signUpLabel ?? 'Sign Up'}
+                  Sign Up
                 </Link>
                 {tier.learnMoreUrl && (
                   <Link href={tier.learnMoreUrl} className={`${buttonBase} px-4 py-2 text-sm`}>

@@ -21,17 +21,12 @@ const suites = [
   { src: '/assets/suites/five-person-suite.jpg',  alt: 'Five-person suite with windows and standing desks' },
   { src: '/assets/suites/office-04.jpg',          alt: 'Private office with windows, desk, and storage' },
   { src: '/assets/suites/three-person-suite.jpg', alt: 'Three-person suite with standing desks' },
-  { src: '/assets/suites/office-06.jpg',          alt: 'Private office with desk and guest seating' },
-  { src: '/assets/suites/single-office.jpg',      alt: 'Single private office with desk and guest chairs' },
-  { src: '/assets/suites/office-01.jpg',          alt: 'Private office with mural wall and guest seating' },
-  { src: '/assets/suites/office-03.jpg',          alt: 'Private office with glass entry and windows' },
 ]
 
 export default function SuitesPage() {
   return (
     <div className="bg-white">
       <section className="mx-auto max-w-5xl px-6 pt-20 pb-12 space-y-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Individual and Team Suites</p>
         <h1 className="font-display text-6xl text-[#0c0c0c]">A private home base inside a thriving community.</h1>
         <p className="max-w-2xl text-black/70">
           From single offices for focused solo work to suites built for growing teams, every private space comes with
