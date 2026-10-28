@@ -33,7 +33,7 @@ const tiers = [
     price: '$450',
     cadence: 'per month',
     intro: 'The Coworking Membership plus a desk you can truly make your own.',
-    features: ['Select and personalize your workstation', 'Lockable storage cabinet + mail service', 'Additional conference room credits', 'Keep gear, monitors, and peripherals in place'],
+    features: ['Select and personalize your workstation', 'Lockable storage cabinet', 'Additional conference room credits', 'Keep gear, monitors, and peripherals in place'],
     highlight: 'Ideal for creators who want permanence without sacrificing community.',
     signUpUrl: URLS.dedicated,
   },
@@ -45,6 +45,27 @@ const tiers = [
     features: ['Dedicated office with natural light + private storage', 'Additional conference room allotments', 'Closed-door focus plus access to open coworking zones', 'Concierge support for IT, guests, and workshops'],
     highlight: 'Scale-ups, agencies, and distributed teams get a branded home base.',
     signUpUrl: URLS.contact,
+    learnMoreUrl: '/suites',
+  },
+  {
+    name: 'Mail Service for Members',
+    price: '$50',
+    cadence: 'per month',
+    intro: 'Add a professional business address to your Convivia membership.',
+    features: ['Walnut Creek business address at 1485 Treat Blvd.', 'Mail and package receiving on your behalf', 'Notifications when mail or packages arrive', 'Secure holding until you pick up', 'Mail forwarding available for $25/month + postage'],
+    highlight: 'USPS Form 1583 authorization is required before service begins.',
+    signUpUrl: URLS.contact,
+    signUpLabel: 'Contact us',
+  },
+  {
+    name: 'Mail Service for Non-Members',
+    price: '$99',
+    cadence: 'per month',
+    intro: 'A professional business address without a desk, ideal for remote and home-based businesses.',
+    features: ['Walnut Creek business address at 1485 Treat Blvd.', 'Mail and package receiving on your behalf', 'Notifications when mail or packages arrive', 'Secure holding until you pick up', 'One-time $25 setup fee', 'Mail forwarding available for $25/month + postage'],
+    highlight: 'USPS Form 1583 authorization is required before service begins.',
+    signUpUrl: URLS.contact,
+    signUpLabel: 'Contact us',
   },
 ]
 
@@ -86,8 +107,13 @@ export default function MembershipPage() {
                   Book a tour
                 </Link>
                 <Link href={tier.signUpUrl} target="_blank" rel="noopener noreferrer" className={`${buttonBase} px-4 py-2 text-sm`}>
-                  Sign Up
+                  {tier.signUpLabel ?? 'Sign Up'}
                 </Link>
+                {tier.learnMoreUrl && (
+                  <Link href={tier.learnMoreUrl} className={`${buttonBase} px-4 py-2 text-sm`}>
+                    View suites
+                  </Link>
+                )}
               </div>
             </div>
           ))}

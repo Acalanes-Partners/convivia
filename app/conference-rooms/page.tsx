@@ -6,10 +6,10 @@ const BOOK_URL = 'https://conviviawork.coworksapp.com/book/716'
 
 const rooms = [
   {
-    name: 'Flexible Conference Room',
-    image: '/assets/conference-rooms/flexible-conference-room.jpg',
+    name: 'The Stack',
+    image: '/assets/conference-rooms/the-stack.jpg',
     description:
-      'Ideal for workshops, pitch practice, and onboarding sessions. Dual 4K displays for hybrid working sessions. Flexible seating with movable desks allowing many setups for collaboration.',
+      'The Stack, a spacious meeting area, can accommodate larger groups. Perfect for networking and educational meetings.',
   },
   {
     name: 'Executive Boardroom',

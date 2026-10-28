@@ -9,6 +9,7 @@ const links = [
   { href: '/conference-rooms', label: 'Conference Rooms' },
   { href: '/av-studio',        label: 'AV Studio' },
   { href: '/membership',       label: 'Memberships' },
+  { href: '/suites',           label: 'Suites' },
   { href: '/gallery',          label: 'Gallery' },
   { href: '/faq',              label: 'FAQ' },
 ]
@@ -35,11 +36,12 @@ export default function Nav() {
           {/* Address — center, desktop only */}
           <div className="hidden lg:flex flex-col items-center">
             <span className="text-xs font-semibold text-[#fe904d] uppercase tracking-widest">Location</span>
-            <span className="text-sm font-medium text-black/70">1485 Treat Blvd. Walnut Creek, CA</span>
+            <span className="text-sm font-medium text-black/70 whitespace-nowrap">1485 Treat Blvd.</span>
+            <span className="text-sm font-medium text-black/70 whitespace-nowrap">Walnut Creek, CA</span>
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden items-center gap-6 text-sm font-medium text-black/60 lg:flex">
+          <nav className="hidden items-center gap-5 whitespace-nowrap text-sm font-medium text-black/60 lg:flex">
             {links.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-black transition-colors">
                 {link.label}
