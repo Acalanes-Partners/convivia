@@ -7,7 +7,6 @@ export default function LocationSection() {
         {/* Text + bullets */}
         <div className="space-y-6">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Location</p>
             <h2 className="font-display text-5xl text-[#0c0c0c] mt-2">Find us in Walnut Creek</h2>
             <p className="mt-3 text-black/70 font-medium">1485 Treat Blvd. Walnut Creek, CA 94597</p>
           </div>

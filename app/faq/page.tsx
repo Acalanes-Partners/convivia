@@ -123,7 +123,6 @@ export default function FaqPage() {
     <div className="bg-white">
       <div className="mx-auto max-w-3xl px-6 py-20 space-y-16">
         <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">FAQ</p>
           <h1 className="font-display text-6xl text-[#0c0c0c]">Everything you need to know.</h1>
           <p className="text-black/70">
             {"Can't find what you're looking for? "}

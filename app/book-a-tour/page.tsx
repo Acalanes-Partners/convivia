@@ -3,7 +3,6 @@ import { buttonBase } from '@/lib/theme'
 export default function BookTourPage() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-20 text-white">
-      <p className="text-xs uppercase tracking-[0.4em] text-[#ffbc59]">Tours</p>
       <h1 className="font-display text-6xl">Walk through Convivia Work.</h1>
       <p className="mt-4 text-white/70">
         Choose a time that works for you. Once CoWorks API credentials are provisioned we’ll connect this form directly so bookings flow into the workspace calendar automatically.

@@ -1,7 +1,6 @@
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-20 text-white">
-      <p className="text-xs uppercase tracking-[0.4em] text-[#ffbc59]">Contact</p>
       <h1 className="font-display text-6xl">Let’s talk about your next workspace.</h1>
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <div className="rounded-3xl border border-white/10 bg-white/5 p-6">

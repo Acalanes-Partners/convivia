@@ -6,10 +6,10 @@ const BOOK_URL = 'https://conviviawork.coworksapp.com/book/716'
 
 const rooms = [
   {
-    name: 'Flexible Conference Room',
-    image: '/assets/conference-rooms/flexible-conference-room.jpg',
+    name: 'The Stack',
+    image: '/assets/conference-rooms/the-stack.jpg',
     description:
-      'Ideal for workshops, pitch practice, and onboarding sessions. Dual 4K displays for hybrid working sessions. Flexible seating with movable desks allowing many setups for collaboration.',
+      'The Stack, a spacious meeting area, can accommodate larger groups. Perfect for networking and educational meetings.',
   },
   {
     name: 'Executive Boardroom',
@@ -36,7 +36,6 @@ export default function ConferenceRoomsPage() {
     <div className="bg-white">
       <div className="mx-auto max-w-5xl px-6 py-20 space-y-10">
         <div className="space-y-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Conference Rooms</p>
           <h1 className="font-display text-6xl text-[#0c0c0c]">Spaces that honor how you collaborate.</h1>
           <p className="text-black/70">
             Each room is fully equipped with 4K large-format displays, studio-grade audio,
@@ -60,7 +59,6 @@ export default function ConferenceRoomsPage() {
               </div>
               {/* Room details */}
               <div className="p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-black/50">Conference Room</p>
                 <h2 className="text-2xl font-bold text-[#0c0c0c]">{room.name}</h2>
                 <p className="mt-3 text-black/70">{room.description}</p>
                 <ul className="mt-4 space-y-2 text-black/70 text-sm">

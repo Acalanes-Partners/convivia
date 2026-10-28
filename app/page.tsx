@@ -113,7 +113,6 @@ export default function HomePage() {
       <section id="workspace" className="bg-white">
         <div className="mx-auto grid max-w-6xl gap-16 px-6 py-20 md:grid-cols-2 md:items-center">
           <div className="space-y-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Technology-first</p>
             <h2 className="font-display text-5xl text-[#0c0c0c]">Infrastructure that keeps up with your ambition.</h2>
             <p className="text-black/70">
               Multi gigabit internet with 5G failover, redundant mesh wifi, 24/7 access control. AV native spaces allow hybrid teams to connect with zero friction.
@@ -129,7 +128,6 @@ export default function HomePage() {
 
           {/* Community Signals — warm gray card */}
           <div id="community" className="rounded-3xl bg-[#f5f0eb] p-10 space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Community Signals</p>
             <h3 className="text-2xl font-bold text-[#0c0c0c]">Built for builders</h3>
             <p className="text-black/70">
               Convivia Work attracts founders, creatives and highly productive professionals who want both momentum and community.
@@ -145,7 +143,6 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6 py-20">
           <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Amenities</p>
               <h2 className="font-display text-5xl text-[#0c0c0c]">Everything you need to stay in flow.</h2>
             </div>
             <Link href="/book-a-tour" className="text-sm font-semibold text-black/60 hover:text-black transition-colors">
@@ -167,7 +164,6 @@ export default function HomePage() {
       <section id="plans" className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-20 space-y-8">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#fe904d]">Memberships</p>
             <h2 className="font-display text-5xl text-[#0c0c0c]">Pick the cadence that matches your build.</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -206,7 +202,6 @@ export default function HomePage() {
       {/* CTA — charcoal bg */}
       <section id="book" className="bg-[#2a2320]">
         <div className="mx-auto max-w-5xl px-10 py-20 text-center text-white">
-          <p className="text-xs font-semibold uppercase tracking-[0.5em] text-[#fe904d]">Tours open now</p>
           <h2 className="font-display text-5xl text-white mt-3">See the space IRL.</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/70">
             Walk through Convivia Work, test the network, and grab a coffee with our community team.
