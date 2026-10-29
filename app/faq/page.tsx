@@ -76,7 +76,7 @@ const sections = [
     items: [
       {
         q: 'What spaces are available at Convivia Work?',
-        a: '• Focus zones — Glare free adjustable standing desks with monitors, purpose built for deep work\n• Collaboration areas — Expansive windows and modular seating for brainstorms and casual standups\n• Phone booths and quiet zones — For private calls and heads down focus\n• 4 conference rooms — Avid Learner, Scrappy, Seeks Context, and Creative Problem Solver, each with 4K displays, video conferencing, and whiteboards\n• AV Production Studio — Green screen, acoustic dampening, cinema lighting, and full production hookups',
+        a: '• Focus zones — Glare free adjustable standing desks with monitors, purpose built for deep work\n• Collaboration areas — Expansive windows and modular seating for brainstorms and casual standups\n• Phone booths and quiet zones — For private calls and heads down focus\n• 4 conference rooms — The Stack, Executive Boardroom, Small Meeting Room, and Stand Up Meeting Room, each with 4K displays, video conferencing, and whiteboards\n• AV Production Studio — Green screen, acoustic dampening, cinema lighting, and full production hookups',
       },
       {
         q: 'What internet speeds can I expect?',

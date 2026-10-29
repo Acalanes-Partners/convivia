@@ -203,7 +203,7 @@ export default function HomePage() {
             <div>
               <h2 className="font-display text-5xl text-[#0c0c0c]">Everything you need to stay in flow.</h2>
             </div>
-            <Link href="/book-a-tour" className="text-sm font-semibold text-black/60 hover:text-black transition-colors">
+            <Link href={URLS.tour} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-black/60 hover:text-black transition-colors">
               Book a tour →
             </Link>
           </div>
