@@ -1,7 +1,17 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HeroGallery } from '@/components/HeroGallery'
 import LocationSection from '@/components/LocationSection'
 import { buttonBase } from '@/lib/theme'
+import JsonLd from '@/components/JsonLd'
+import { BUSINESS, SITE_URL } from '@/lib/site'
+
+export const metadata: Metadata = {
+  title: { absolute: 'Convivia Work | Coworking Space in Walnut Creek, CA' },
+  description:
+    'Tech-forward coworking near Pleasant Hill BART in Walnut Creek, CA. Day passes from $50, coworking memberships, dedicated desks, private office suites, conference rooms, and an AV studio.',
+  alternates: { canonical: '/' },
+}
 
 const URLS = {
   tour:       'https://conviviawork.coworksapp.com/tour-request/716',
@@ -64,9 +74,57 @@ const plans = [
   },
 ]
 
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${SITE_URL}/#business`,
+  name: BUSINESS.name,
+  description: BUSINESS.description,
+  url: SITE_URL,
+  logo: `${SITE_URL}/assets/LOGOS/PNG/logo-color.png`,
+  image: [`${SITE_URL}/assets/office/office-05.jpg`, `${SITE_URL}/assets/suites/team-suite.jpg`],
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: BUSINESS.street,
+    addressLocality: BUSINESS.city,
+    addressRegion: BUSINESS.region,
+    postalCode: BUSINESS.postalCode,
+    addressCountry: BUSINESS.country,
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00',
+    closes: '17:00',
+  },
+  priceRange: '$50–$450',
+  amenityFeature: [
+    'Multigigabit internet with 5G failover',
+    '24/7 member access',
+    'Conference rooms with 4K displays',
+    'AV production studio',
+    'Phone booths',
+    'Kitchen and coffee',
+    'Private office suites',
+    'Business mail service',
+  ].map((name) => ({ '@type': 'LocationFeatureSpecification', name, value: true })),
+  makesOffer: [
+    { name: 'Day Pass', price: '50', unit: 'DAY' },
+    { name: 'Coworking Membership', price: '382', unit: 'MON' },
+    { name: 'Dedicated Desk Membership', price: '450', unit: 'MON' },
+    { name: 'Mail Service for Members', price: '50', unit: 'MON' },
+    { name: 'Mail Service for Non-Members', price: '99', unit: 'MON' },
+  ].map(({ name, price, unit }) => ({
+    '@type': 'Offer',
+    name,
+    priceSpecification: { '@type': 'UnitPriceSpecification', price, priceCurrency: 'USD', unitCode: unit },
+  })),
+}
+
 export default function HomePage() {
   return (
     <div>
+      <JsonLd data={businessSchema} />
       {/* Hero — white bg */}
       <section className="bg-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 pt-16 pb-20 md:flex-row md:items-center">
@@ -145,7 +203,7 @@ export default function HomePage() {
             <div>
               <h2 className="font-display text-5xl text-[#0c0c0c]">Everything you need to stay in flow.</h2>
             </div>
-            <Link href="/book-a-tour" className="text-sm font-semibold text-black/60 hover:text-black transition-colors">
+            <Link href={URLS.tour} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-black/60 hover:text-black transition-colors">
               Book a tour →
             </Link>
           </div>

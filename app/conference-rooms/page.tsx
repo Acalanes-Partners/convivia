@@ -1,6 +1,14 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buttonBase } from '@/lib/theme'
+
+export const metadata: Metadata = {
+  title: 'Conference & Meeting Rooms in Walnut Creek',
+  description:
+    'Book conference and meeting rooms in Walnut Creek, CA, from small meeting rooms to The Stack for larger groups. 4K displays and video conferencing in every room.',
+  alternates: { canonical: '/conference-rooms' },
+}
 
 const BOOK_URL = 'https://conviviawork.coworksapp.com/book/716'
 

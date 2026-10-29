@@ -1,6 +1,14 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buttonBase } from '@/lib/theme'
+
+export const metadata: Metadata = {
+  title: 'Private Office & Team Suites in Walnut Creek',
+  description:
+    'Private offices and team suites for 1–12 people in Walnut Creek, CA, with full access to coworking lounges, kitchen, conference rooms, and events. Book a tour.',
+  alternates: { canonical: '/suites' },
+}
 
 const URLS = {
   tour:    'https://conviviawork.coworksapp.com/tour-request/716',
@@ -30,7 +38,7 @@ export default function SuitesPage() {
         <h1 className="font-display text-6xl text-[#0c0c0c]">A private home base inside a thriving community.</h1>
         <p className="max-w-2xl text-black/70">
           From single offices for focused solo work to suites built for growing teams, every private space comes with
-          full access to Convivia Work's kitchen, lounges, conference rooms, and community events.
+          full access to Convivia Work&apos;s kitchen, lounges, conference rooms, and community events.
         </p>
         <Link href={URLS.tour} target="_blank" rel="noopener noreferrer" className={`${buttonBase} px-6 py-3 text-sm`}>
           Book a Tour

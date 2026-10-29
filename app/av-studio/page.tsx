@@ -1,6 +1,14 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { buttonBase } from '@/lib/theme'
+
+export const metadata: Metadata = {
+  title: 'Podcast & Video Studio in Walnut Creek',
+  description:
+    'Rent a podcast and video production studio in Walnut Creek, CA, with green screen, wood backdrop, cinema lighting, and acoustic treatment.',
+  alternates: { canonical: '/av-studio' },
+}
 
 const BOOK_URL = 'https://conviviawork.coworksapp.com/book/716'
 

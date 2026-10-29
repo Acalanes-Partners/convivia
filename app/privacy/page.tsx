@@ -1,4 +1,10 @@
+import type { Metadata } from 'next'
 import ManageCookiesButton from '@/components/ManageCookiesButton'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  alternates: { canonical: '/privacy' },
+}
 
 export default function PrivacyPage() {
   return (

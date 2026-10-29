@@ -1,5 +1,13 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buttonBase } from '@/lib/theme'
+
+export const metadata: Metadata = {
+  title: 'Coworking Membership Plans & Pricing',
+  description:
+    'Convivia Work pricing in Walnut Creek: Day Pass $50, Coworking Membership $382/month, Dedicated Desk $450/month, custom team suites, and business mail service from $50/month.',
+  alternates: { canonical: '/membership' },
+}
 
 const URLS = {
   tour:      'https://conviviawork.coworksapp.com/tour-request/716',
