@@ -1,3 +1,13 @@
+import type { Metadata } from 'next'
+import JsonLd from '@/components/JsonLd'
+
+export const metadata: Metadata = {
+  title: 'Coworking FAQ',
+  description:
+    'Answers about Convivia Work in Walnut Creek, CA: hours, pricing, parking, memberships, mail service, conference rooms, and the AV studio.',
+  alternates: { canonical: '/faq' },
+}
+
 const sections = [
   {
     title: 'General',
@@ -33,7 +43,7 @@ const sections = [
     items: [
       {
         q: 'What membership options are available?',
-        a: "We offer four plans:\n\n• Day Pass — $50/day. Adjustable standing desk, monitor, kitchen and coffee access, and phone booth access.\n• Coworking Membership — $382/month. 24/7 access, conference room credits, and priority invites to community and founder events.\n• Dedicated Desk Membership — $450/month. Everything in Coworking, plus a permanent personalized workstation with lockable storage and mail service eligibility.\n• Custom Team Suite — Custom pricing for teams of 2–12, with a private dedicated space and full access to shared amenities.",
+        a: "We offer four plans:\n\n• Day Pass — $50/day. Adjustable standing desk, monitor, kitchen and coffee access, and phone booth access.\n• Coworking Membership — $382/month. 24/7 access, conference room credits, and priority invites to community and founder events.\n• Dedicated Desk Membership — $450/month. Everything in Coworking, plus a permanent personalized workstation with lockable storage.\n• Custom Team Suite — Custom pricing for teams of 2–12, with a private dedicated space and full access to shared amenities.\n\nBusiness mail service is also available: $50/month for members, or $99/month plus a one-time $25 setup fee for non-members.",
       },
       {
         q: 'Are memberships month to month?',
@@ -57,7 +67,7 @@ const sections = [
       },
       {
         q: 'Are there additional costs for amenities like printing, mail, or WiFi?',
-        a: 'WiFi, kitchen access, and coffee are included with all memberships. Printing is available onsite. Mail and package handling is available as an add on service—reach out to our team to coordinate.',
+        a: 'WiFi, kitchen access, and coffee are included with all memberships. Printing is available onsite. Mail and package service is an add-on: $50/month for members.',
       },
     ],
   },
@@ -81,8 +91,8 @@ const sections = [
         a: 'Yes, printing is available onsite.',
       },
       {
-        q: 'Is mail and package service available?',
-        a: 'Mail and package handling is available as an add on service. Contact our team to get set up.',
+        q: 'Can I use Convivia Work as my business address?',
+        a: 'Yes. You can use Convivia Work as your business mailing address, with mail and package receiving and arrival notifications. Mail service is $50/month for members, or $99/month plus a one-time $25 setup fee for non-members. Mail forwarding is available for $25/month plus postage. USPS Form 1583 is required before service begins.',
       },
       {
         q: 'What is the AV Production Studio?',
@@ -118,9 +128,22 @@ const sections = [
   },
 ]
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: sections.flatMap((section) =>
+    section.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  ),
+}
+
 export default function FaqPage() {
   return (
     <div className="bg-white">
+      <JsonLd data={faqSchema} />
       <div className="mx-auto max-w-3xl px-6 py-20 space-y-16">
         <div className="space-y-4">
           <h1 className="font-display text-6xl text-[#0c0c0c]">Everything you need to know.</h1>

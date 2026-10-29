@@ -1,4 +1,9 @@
+import type { Metadata } from 'next'
 import { buttonBase } from '@/lib/theme'
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+}
 
 export default function BookTourPage() {
   return (

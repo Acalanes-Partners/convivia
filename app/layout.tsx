@@ -4,14 +4,26 @@ import './globals.css'
 import Nav from '@/components/Nav'
 import CookieManager from '@/components/CookieManager'
 import ManageCookiesButton from '@/components/ManageCookiesButton'
+import { SITE_URL } from '@/lib/site'
 
 const display = Bebas_Neue({ weight: '400', subsets: ['latin'], variable: '--font-display' })
 const body    = DM_Sans({ subsets: ['latin'], variable: '--font-body', weight: ['400','500','600','700'] })
 
 export const metadata: Metadata = {
-  title: 'Convivia Work — Create • Connect • CoWork',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'Convivia Work — Create • Connect • CoWork',
+    template: '%s | Convivia Work',
+  },
   description:
     'Tech-forward coworking for founders, creatives, and small teams. Book a tour and experience Convivia Work in Walnut Creek.',
+  openGraph: {
+    type: 'website',
+    siteName: 'Convivia Work',
+    locale: 'en_US',
+    images: [{ url: '/assets/office/office-05.jpg', width: 4500, height: 3000, alt: 'Convivia Work kitchen and lounge in Walnut Creek' }],
+  },
+  twitter: { card: 'summary_large_image' },
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',

@@ -1,3 +1,9 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+}
+
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-20 text-white">
