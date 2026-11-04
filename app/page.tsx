@@ -67,8 +67,8 @@ const plans = [
   },
   {
     name: 'Team Suite',
-    price: 'Custom',
-    cadence: 'per team',
+    price: 'From $1,480',
+    cadence: 'per month',
     description:
       'Dedicated space for 2–12 people with private storage and additional conference room credits.',
   },
@@ -97,7 +97,7 @@ const businessSchema = {
     opens: '09:00',
     closes: '17:00',
   },
-  priceRange: '$50–$450',
+  priceRange: '$50–$1,480+',
   amenityFeature: [
     'Multigigabit internet with 5G failover',
     '24/7 member access',
@@ -112,6 +112,7 @@ const businessSchema = {
     { name: 'Day Pass', price: '50', unit: 'DAY' },
     { name: 'Coworking Membership', price: '382', unit: 'MON' },
     { name: 'Dedicated Desk Membership', price: '450', unit: 'MON' },
+    { name: 'Private Office (starting price)', price: '1480', unit: 'MON' },
     { name: 'Mail Service for Members', price: '50', unit: 'MON' },
     { name: 'Mail Service for Non-Members', price: '99', unit: 'MON' },
   ].map(({ name, price, unit }) => ({

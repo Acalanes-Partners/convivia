@@ -6,7 +6,7 @@ import { buttonBase } from '@/lib/theme'
 export const metadata: Metadata = {
   title: 'Private Office & Team Suites in Walnut Creek',
   description:
-    'Private offices and team suites for 1–12 people in Walnut Creek, CA, with full access to coworking lounges, kitchen, conference rooms, and events. Book a tour.',
+    'Private offices from $1,480/month and team suites for 1–12 people in Walnut Creek, CA, with full access to coworking lounges, kitchen, conference rooms, and events. Book a tour.',
   alternates: { canonical: '/suites' },
 }
 
@@ -16,10 +16,10 @@ const URLS = {
 }
 
 const teamSuite = {
-  name: 'Custom Team Suite',
-  price: 'Custom',
-  cadence: 'per team',
-  intro: 'Private studios for teams of 2–12 with full access to the shared ecosystem.',
+  name: 'Private Offices & Team Suites',
+  price: 'From $1,480',
+  cadence: 'per month',
+  intro: 'Private offices for individuals and suites for teams of up to 12, with full access to the shared ecosystem.',
   features: ['Dedicated office with natural light + private storage', 'Additional conference room allotments', 'Closed-door focus plus access to open coworking zones', 'Concierge support for IT, guests, and workshops'],
   highlight: 'Scale-ups, agencies, and distributed teams get a branded home base.',
 }
@@ -29,6 +29,13 @@ const suites = [
   { src: '/assets/suites/five-person-suite.jpg',  alt: 'Five-person suite with windows and standing desks' },
   { src: '/assets/suites/office-04.jpg',          alt: 'Private office with windows, desk, and storage' },
   { src: '/assets/suites/three-person-suite.jpg', alt: 'Three-person suite with standing desks' },
+]
+
+const guides = [
+  { label: 'Private office memberships', href: '/private-office-walnut-creek' },
+  { label: 'Office space for small teams', href: '/team-office-space' },
+  { label: 'Office membership vs. traditional lease', href: '/office-membership-vs-lease' },
+  { label: 'East Bay hub for remote teams', href: '/satellite-office' },
 ]
 
 export default function SuitesPage() {
@@ -100,6 +107,13 @@ export default function SuitesPage() {
           <Link href={URLS.tour} target="_blank" rel="noopener noreferrer" className={`${buttonBase} px-6 py-3 text-sm`}>
             Book a Tour
           </Link>
+        </div>
+        <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 text-sm font-semibold text-black/60">
+          {guides.map((guide) => (
+            <Link key={guide.href} href={guide.href} className="hover:text-black transition-colors">
+              {guide.label} →
+            </Link>
+          ))}
         </div>
       </section>
     </div>
