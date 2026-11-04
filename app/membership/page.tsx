@@ -5,7 +5,7 @@ import { buttonBase } from '@/lib/theme'
 export const metadata: Metadata = {
   title: 'Coworking Membership Plans & Pricing',
   description:
-    'Convivia Work pricing in Walnut Creek: Day Pass $50, Coworking Membership $382/month, Dedicated Desk $450/month, custom team suites, and business mail service from $50/month.',
+    'Convivia Work pricing in Walnut Creek: Day Pass $50, Coworking Membership $382/month, Dedicated Desk $450/month, private offices from $1,480/month, and business mail service from $50/month.',
   alternates: { canonical: '/membership' },
 }
 
@@ -48,10 +48,10 @@ const tiers = [
     signUpUrl: URLS.dedicated,
   },
   {
-    name: 'Custom Team Suite',
-    price: 'Custom',
-    cadence: 'per team',
-    intro: 'Private studios for teams of 2–12 with full access to the shared ecosystem.',
+    name: 'Private Offices & Team Suites',
+    price: 'From $1,480',
+    cadence: 'per month',
+    intro: 'Private offices for individuals and suites for teams of up to 12, with full access to the shared ecosystem.',
     features: ['Dedicated office with natural light + private storage', 'Additional conference room allotments', 'Closed-door focus plus access to open coworking zones', 'Concierge support for IT, guests, and workshops'],
     highlight: 'Scale-ups, agencies, and distributed teams get a branded home base.',
     signUpUrl: URLS.contact,
