@@ -1,0 +1,22 @@
+name: Submit pages to search engines
+
+# Run it from the Actions tab after each Vercel deploy ("Run workflow"),
+# and automatically every Monday as a backstop.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 16 * * 1' # Mondays, 9am Pacific
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/submit-search-engines.mjs
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+          GSC_PROPERTY: ${{ vars.GSC_PROPERTY }}
